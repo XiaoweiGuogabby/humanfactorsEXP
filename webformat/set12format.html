@@ -28,6 +28,7 @@
 
             // Display the random values in a centered line\
             output.textContent = randomValues.join(''); // Join the array without spaces\
+            localStorage.setItem('randomValuesSet12', JSON.stringify(randomValues));
         });
     </script>
 </head>
