@@ -27,9 +27,9 @@
     <button onclick="recordDigits()">Submit</button>
     <script>
         function recordDigits() {
-            var input = document.getElementById("digitInput").value;
+            var input = document.getElementById("user-input").value;
             localStorage.setItem("userDigits", input);
-            alert('Input saved ');
+            alert('Input saved');
             window.location.href = "set12format.html";
         }
     </script>
