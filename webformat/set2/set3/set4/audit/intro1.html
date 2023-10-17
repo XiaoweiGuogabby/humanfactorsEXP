@@ -23,6 +23,19 @@
 <body>
 <iframe src="https://xiaoweiguogabby.github.io/humanfactorsEXP/webformat/set2/set3/set4/audit/Instrumental.html" frameborder="0" scrolling="no" width="300" height="60"></iframe>
 <h1>Experiment 2</h1>
-<button onclick="window.location.href = 'set12format.html'" target="_blank"">Set1</button>
+<button id="openNextWebsite">Set1</button>
+  <script>
+  // Get the button element by its id
+  const openButton = document.getElementById('openNextWebsite');
+
+  // Add a click event listener to the button
+  openButton.addEventListener('click', function() {
+    // Define the URL of the next website you want to open
+    const nextWebsiteURL = 'https://xiaoweiguogabby.github.io/humanfactorsEXP/webformat/set2/set3/set4/audit/set12format.html'; // Replace with your URL
+
+    // Open the URL in a new tab
+    window.open(nextWebsiteURL, '_blank');
+  });
+</script>
 </body>
 </html>
