@@ -34,7 +34,7 @@
             localStorage.setItem('randomValues1_2', JSON.stringify(randomValues1_2));
             
             // Create a Blob with the data
-            const blob = new Blob([randomValues1_1.join("\n"),"\n","\n",randomValues1_2.join("\n")], { type: "text/csv" });
+            const blob = new Blob([randomValues1_2.join("\n")], { type: "text/csv" });
 
             // Create a URL for the Blob
             const url = URL.createObjectURL(blob);
