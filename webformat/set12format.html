@@ -17,18 +17,18 @@
     <script>
         // JavaScript code to generate and display random values\
         window.addEventListener('load', function() {
-            var randomValues = [];
+            var randomValues1_1 = [];
             var randomValue;
             var output = document.getElementById('random-values');
             
             for (var i = 0; i < 12; i++) {
                 randomValue = Math.floor(Math.random() * 10); // Generates a random value between 0 and 9\
-                randomValues.push(randomValue);
+                randomValues1_1.push(randomValue);
               }
 
             // Display the random values in a centered line\
-            output.textContent = randomValues.join(''); // Join the array without spaces\
-            localStorage.setItem('randomValuesSet12', JSON.stringify(randomValues));
+            output.textContent = randomValues1_1.join(''); // Join the array without spaces\
+            localStorage.setItem('randomValues1_1', JSON.stringify(randomValues1_1));
             
             setTimeout(function() {
             // Replace the URL with the one you want to redirect to
@@ -36,32 +36,6 @@
         }, 5000); // 10,000 milliseconds = 10 seconds
         });
     </script>
-        <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js"></script>
-    <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyB5zsqnlZEc7j1dyS0V8QoOXCejUOn_k_w",
-      authDomain: "humanfactorsexp.firebaseapp.com",
-      projectId: "humanfactorsexp",
-      storageBucket: "humanfactorsexp.appspot.com",
-      messagingSenderId: "240344021069",
-      appId: "1:240344021069:web:fc89e698857d28cbc70404",
-      measurementId: "G-WCGK4ZCHZE"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    var db = firebase.firestore();
-        db.collection("humanfactorsEXP").add({
-                data: randomValues
-            })
-        .then(function(docRef) {
-                console.log("Document written with ID: ", docRef.id);
-            })
-        .catch(function(error) {
-                console.error("Error adding document: ", error);
-            });
-        });
-  </script>
 </head>
 <body>
     <div id="random-values"></div>
