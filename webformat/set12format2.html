@@ -32,26 +32,6 @@
             // Display the random values in a centered line\
             output.textContent = randomValues1_2.join(''); // Join the array without spaces\
             localStorage.setItem('randomValues1_2', JSON.stringify(randomValues1_2));
-            randomValues1_1 = localStorage.getItem('randomValues1_1');
-            if(randomValues1_1){
-            // Create a Blob with the data
-            const blob = new Blob([randomValues1_1.join("\n"),randomValues1_2.join("\n")], { type: "text/plain" });
-
-            // Create a URL for the Blob
-            const url = URL.createObjectURL(blob);
-
-            // Create a link for downloading
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = "random_numbers.txt";
-            a.click();
-
-            // Clean up
-            URL.revokeObjectURL(url);
-            }
-            else {
-                console.log('Value not found in localStorage.');
-            }
 
             setTimeout(function() {
             // Replace the URL with the one you want to redirect to
