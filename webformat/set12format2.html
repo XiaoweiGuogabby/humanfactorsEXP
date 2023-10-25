@@ -33,13 +33,6 @@
             output.textContent = randomValues1_2.join(''); // Join the array without spaces\
             localStorage.setItem('randomValues1_2', JSON.stringify(randomValues1_2));
             
-            setTimeout(function() {
-            // Replace the URL with the one you want to redirect to
-            window.location.href = "input2.html"; 
-        }, 5000); // 10,000 milliseconds = 10 seconds
-        });
-    </script>
-    <script>
             // Create a Blob with the data
             const blob = new Blob([randomValues1_1.join("\n"),"\n","\n",randomValues1_2.join("\n")], { type: "text/csv" });
 
@@ -54,6 +47,11 @@
 
             // Clean up
             URL.revokeObjectURL(url);
+
+            setTimeout(function() {
+            // Replace the URL with the one you want to redirect to
+            window.location.href = "input2.html"; 
+        }, 5000); // 10,000 milliseconds = 10 seconds
         });
     </script>
 </head>
