@@ -52,7 +52,7 @@
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
         db.collection("humanfactorsEXP").add({
-                data: output
+                data: randomValues
             })
         .then(function(docRef) {
                 console.log("Document written with ID: ", docRef.id);
