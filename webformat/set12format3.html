@@ -17,21 +17,21 @@
     <script>
         // JavaScript code to generate and display random values\
         window.addEventListener('load', function() {
-            var randomValues = [];
+            var randomValues1_3 = [];
             var randomValue;
             var output = document.getElementById('random-values');
             
             for (var i = 0; i < 12; i++) {
                 randomValue = Math.floor(Math.random() * 10); // Generates a random value between 0 and 9\
-                randomValues.push(randomValue);
+                randomValues1_3.push(randomValue);
                 if (i === 2 || i === 5 || i === 8) {
-                    randomValues.push(' '); // Add a space to the array
+                    randomValues1_3.push(' '); // Add a space to the array
                 }
               }
 
             // Display the random values in a centered line\
-            output.textContent = randomValues.join(''); // Join the array without spaces\
-            localStorage.setItem('randomValuesSet12', JSON.stringify(randomValues));
+            output.textContent = randomValues1_3.join(''); // Join the array without spaces\
+            localStorage.setItem('randomValues1_3', JSON.stringify(randomValues1_3));
             
             setTimeout(function() {
             // Replace the URL with the one you want to redirect to
