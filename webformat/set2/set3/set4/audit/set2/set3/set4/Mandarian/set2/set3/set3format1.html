@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Values with Extended Gap</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            margin: 0;
+        }
+        #random-values {
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        // JavaScript code to generate and display random values\
+        window.addEventListener('load', function() {
+            var randomValues3_7 = [];
+            var randomValue;
+            var output = document.getElementById('random-values');
+            
+            for (var i = 0; i < 12; i++) {
+                randomValue = Math.floor(Math.random() * 10); // Generates a random value between 0 and 9\
+                randomValues3_7.push(randomValue);
+                if (i === 3 || i === 7) {
+                    randomValues3_7.push(' '); // Add a space to the array
+                }
+              }
+
+            // Display the random values in a centered line\
+            output.textContent = randomValues3_7.join(''); // Join the array without spaces\
+            localStorage.setItem('randomValues3_7', JSON.stringify(randomValues3_7));
+            
+            setTimeout(function() {
+            // Replace the URL with the one you want to redirect to
+            window.location.href = "input31.html"; 
+        }, 5000); // 10,000 milliseconds = 10 seconds
+        });
+    </script>
+</head>
+<body>
+    <div id="random-values"></div>
+</body>
+</html>
