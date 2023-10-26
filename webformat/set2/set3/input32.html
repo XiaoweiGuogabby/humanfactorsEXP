@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 20vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        input {
+            font-size: 16px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Type down the numbers you remember:</h1>
+    <input type="text" id="user-input" placeholder="Type digits here...">
+    <br>
+    <button onclick="recordDigits()">Submit</button>
+    <script>
+        function recordDigits() {
+            var input1_8 = document.getElementById("user-input").value;
+            localStorage.setItem("input1_8", input1_8);
+            alert('Input saved');
+            window.location.href = "intro33.html";
+        }
+    </script>
+
+</body>
+</html>
